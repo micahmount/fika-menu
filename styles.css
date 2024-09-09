@@ -38,6 +38,16 @@ p.menu-items {
     margin: 3%;
 }        
 
+.item-3 {
+    grid-area: item-3;
+    margin: 3%;
+}        
+
+.item-4 {
+    grid-area: item-4;
+    margin: 3%;
+}
+
 .container {
   margin-top: 3%;
   display: grid;
@@ -45,6 +55,7 @@ p.menu-items {
   grid-template-rows: auto;
   grid-template-areas: 
   "logo item-1 item-2"
+  "logo item-3 item-4"
   "footer footer footer";
 }      
 
