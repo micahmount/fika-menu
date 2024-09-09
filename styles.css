@@ -33,6 +33,12 @@ p.menu-items {
   grid-template-rows: auto;
 }  
 
+.sub-container-2 {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows: auto;
+}  
+
 .item-2 {
     grid-area: item-2;
     margin: 3%;
