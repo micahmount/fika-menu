@@ -69,6 +69,11 @@ p.menu-items {
     grid-area: footer;
 }        
 
+.footer h3{
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
 .logo {
   margin: auto;
 }        
