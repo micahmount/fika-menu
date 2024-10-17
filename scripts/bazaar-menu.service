@@ -1,0 +1,14 @@
+[Unit]
+Description=Launch Web Browser at Startup
+After=network.target
+
+[Service]
+User=pi
+Environment=XAUTHORITY=/home/pi/.Xauthority
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/xpdf -fullscreen '//home/pi/code/fika-menu/assets/Holiday_Bazaar_Menu.pdf'
+Restart=on-failure
+
+[Install]
+WantedBy=graphical.target
+

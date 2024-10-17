@@ -1,0 +1,15 @@
+[Unit]
+Description=Launch Web Browser at Startup
+After=network.target
+
+[Service]
+User=pi
+Environment=XAUTHORITY=/home/pi/.Xauthority
+Environment=DISPLAY=:0
+ExecStartPre=/usr/bin/sleep 1 
+ExecStart=/usr/bin/midori -e Fullscreen '//home/pi/code/fika-menu/menu.html'
+Restart=on-failure
+
+[Install]
+WantedBy=graphical.target
+
