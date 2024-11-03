@@ -21,6 +21,11 @@ p.menu-items {
 }
 
 /* SECTIONS */
+h1 {
+  margin-block-start: 0.5em;
+}
+
+
 /* SECTIONS - CLASSES */
 .item-1 {
     grid-area: item-1;
