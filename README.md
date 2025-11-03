@@ -67,7 +67,22 @@ sudo systemctl restart fika-menu.service
 
 ## Development
 
-The menu is a static HTML/CSS page designed for fullscreen display. Edit the HTML and CSS files directly, and refresh the browser to see changes.
+The menu is a static HTML/CSS page designed for fullscreen display. Menu files are located in the `src/main/` directory. Edit the HTML and CSS files directly, and refresh the browser to see changes.
+
+### Project Structure
+
+```
+fika/
+├── src/              # Source files organized by menu type
+│   ├── main/         # Main cafe menu
+│   │   ├── menu.html           # Landscape menu
+│   │   ├── menu_portrait.html  # Portrait menu
+│   │   └── styles.css          # Shared styles
+│   └── bazaar/       # Seasonal bazaar menu
+├── assets/           # Images and static assets
+├── scripts/          # SystemD service files
+└── README.md
+```
 
 ## License
 
