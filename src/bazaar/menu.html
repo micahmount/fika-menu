@@ -3,14 +3,26 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Fika Holiday Bazaar Menu</title>
 </head>
 
 <body>
+    <!-- Snowflake decorations - SVG files loaded via CSS -->
+    <div class="snowflake snowflake-1 snowflake-design-a"></div>
+    <div class="snowflake snowflake-2 snowflake-design-b"></div>
+    <div class="snowflake snowflake-3 snowflake-design-a"></div>
+    <div class="snowflake snowflake-4 snowflake-design-b"></div>
+    <div class="snowflake snowflake-5 snowflake-design-a"></div>
+    <div class="snowflake snowflake-6 snowflake-design-b"></div>
+
     <div class="container">
         <div class="header">
             <h1 class="brand">fika</h1>
+            <span class="divider">|</span>
             <h1 class="title">Holiday Bazaar</h1>
         </div>
 
@@ -65,9 +77,11 @@
                 <div class="section">
                     <h2 class="section-title">PRICES</h2>
                     <div class="prices">
-                        <p>12oz : $5</p>
-                        <p>16oz : $7</p>
-                        <p>Tea & Drip Coffee : $2</p>
+                        <div class="price-row">
+                            <span>12oz : $5</span>
+                            <span class="price-inline">Tea & Drip Coffee : $2</span>
+                        </div>
+                        <div>16oz : $7</div>
                     </div>
                 </div>
             </div>

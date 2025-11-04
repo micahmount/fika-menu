@@ -1,118 +1,123 @@
-/* Holiday Bazaar Menu Styles */
+/* Holiday Bazaar Menu Styles - Exact PDF Replica */
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background: #ffffff;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
-/* Decorative Snowflakes */
-body::before,
-body::after {
-    content: '❄';
+/* SVG Snowflake Positioning */
+.snowflake {
     position: absolute;
-    color: rgba(200, 200, 220, 0.3);
-    font-size: 8em;
-    z-index: 0;
     pointer-events: none;
+    opacity: 0.25;
+    z-index: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-body::before {
-    top: 5%;
-    left: 5%;
+/* Snowflake Designs */
+.snowflake-design-a {
+    background-image: url('../../assets/snowflake-design-a.svg');
+}
+
+.snowflake-design-b {
+    background-image: url('../../assets/snowflake-design-b.svg');
+}
+
+.snowflake-1 {
+    width: 280px;
+    height: 280px;
+    top: -50px;
+    left: -40px;
     transform: rotate(15deg);
 }
 
-body::after {
-    bottom: 10%;
-    right: 8%;
-    font-size: 6em;
-    transform: rotate(-20deg);
+.snowflake-2 {
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    right: 100px;
+    transform: rotate(-25deg);
+}
+
+.snowflake-3 {
+    width: 150px;
+    height: 150px;
+    bottom: 100px;
+    left: 80px;
+    transform: rotate(40deg);
+}
+
+.snowflake-4 {
+    width: 300px;
+    height: 300px;
+    bottom: -80px;
+    right: -60px;
+    transform: rotate(-15deg);
+}
+
+.snowflake-5 {
+    width: 180px;
+    height: 180px;
+    top: 40%;
+    left: -30px;
+    transform: rotate(30deg);
+}
+
+.snowflake-6 {
+    width: 160px;
+    height: 160px;
+    top: 35%;
+    right: 50px;
+    transform: rotate(-35deg);
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2em;
+    padding: 80px 100px;
     position: relative;
     z-index: 1;
-}
-
-/* Additional Snowflakes */
-.container::before,
-.container::after {
-    content: '❅';
-    position: absolute;
-    color: rgba(200, 200, 220, 0.25);
-    font-size: 5em;
-    z-index: -1;
-    pointer-events: none;
-}
-
-.container::before {
-    top: 15%;
-    right: 10%;
-    transform: rotate(45deg);
-}
-
-.container::after {
-    bottom: 20%;
-    left: 8%;
-    font-size: 7em;
-    transform: rotate(-30deg);
 }
 
 /* Header Section */
 .header {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: baseline;
-    gap: 1em;
-    position: relative;
-}
-
-/* More Snowflakes around header */
-.header::before,
-.header::after {
-    content: '❆';
-    position: absolute;
-    color: rgba(200, 200, 220, 0.3);
-    font-size: 4em;
-    pointer-events: none;
-}
-
-.header::before {
-    top: -20%;
-    left: 15%;
-    transform: rotate(-15deg);
-}
-
-.header::after {
-    top: -10%;
-    right: 12%;
-    font-size: 3.5em;
-    transform: rotate(25deg);
+    gap: 0.3em;
 }
 
 .brand {
-    font-size: 5em;
-    color: #d32f2f;
+    font-family: 'Roboto Slab', 'Georgia', serif;
+    font-size: 4.5em;
+    color: #E63027;
     margin: 0;
-    font-weight: bold;
-    letter-spacing: 0.05em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.divider {
+    font-size: 4em;
+    color: #E63027;
+    font-weight: 300;
+    margin: 0 0.2em;
 }
 
 .title {
-    font-size: 5em;
-    color: #d32f2f;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5em;
+    color: #E63027;
     margin: 0;
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
     letter-spacing: 0.02em;
 }
@@ -121,54 +126,30 @@ body::after {
 .menu-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4em;
-    font-size: 2em;
-    position: relative;
-}
-
-/* Snowflakes in menu area */
-.menu-grid::before,
-.menu-grid::after {
-    content: '❄';
-    position: absolute;
-    color: rgba(200, 200, 220, 0.2);
-    font-size: 6em;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.menu-grid::before {
-    top: 30%;
-    left: -5%;
-    transform: rotate(30deg);
-}
-
-.menu-grid::after {
-    top: 60%;
-    right: -3%;
-    font-size: 5em;
-    transform: rotate(-40deg);
+    gap: 150px;
+    font-size: 1.1em;
 }
 
 .column-left,
 .column-right {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 45px;
 }
 
 /* Section Styling */
 .section {
-    margin-bottom: 1em;
+    margin-bottom: 0;
 }
 
 .section-title {
-    color: #d32f2f;
-    font-size: 1.5em;
-    font-weight: bold;
-    letter-spacing: 0.15em;
-    margin: 0 0 0.5em 0;
-    border-bottom: none;
+    color: #E63027;
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 /* Menu Items */
@@ -176,41 +157,61 @@ body::after {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    color: #6b8e7f;
-    font-size: 1.2em;
-    line-height: 1.8;
+    color: #6b8e6b;
+    font-size: 1.15em;
+    line-height: 1.6;
+    font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 .menu-items li {
-    margin: 0.3em 0;
+    margin: 5px 0;
 }
 
 /* Prices Section */
 .prices {
-    color: #6b8e7f;
-    font-size: 1.2em;
-    line-height: 1.8;
+    color: #6b8e6b;
+    font-size: 1.15em;
+    line-height: 1.6;
+    font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
-.prices p {
-    margin: 0.3em 0;
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.price-inline {
+    margin-left: 40px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
+    .container {
+        padding: 60px 80px;
+    }
+
     .menu-grid {
-        font-size: 1.5em;
+        gap: 100px;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .header {
         flex-direction: column;
         gap: 0;
     }
 
+    .divider {
+        display: none;
+    }
+
     .menu-grid {
         grid-template-columns: 1fr;
-        gap: 2em;
+        gap: 40px;
+    }
+
+    .brand, .title {
+        font-size: 3.5em;
     }
 }
