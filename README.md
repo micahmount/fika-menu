@@ -78,9 +78,13 @@ fika/
 │   │   ├── menu.html           # Landscape menu
 │   │   ├── menu_portrait.html  # Portrait menu
 │   │   └── styles.css          # Shared styles
-│   └── bazaar/       # Seasonal bazaar menu
+│   └── bazaar/       # Seasonal Holiday Bazaar menu
+│       ├── menu.html           # Bazaar menu
+│       └── styles.css          # Bazaar styles
 ├── assets/           # Images and static assets
 ├── scripts/          # SystemD service files
+│   ├── fika-menu.service       # Main menu service
+│   └── bazaar-menu.service     # Bazaar menu service
 └── README.md
 ```
 

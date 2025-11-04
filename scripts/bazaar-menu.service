@@ -6,7 +6,7 @@ After=network.target
 User=pi
 Environment=XAUTHORITY=/home/pi/.Xauthority
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/xpdf -fullscreen '//home/pi/code/fika-menu/assets/Holiday_Bazaar_Menu.pdf'
+ExecStart=/usr/bin/midori -e Fullscreen '//home/pi/code/fika-menu/src/bazaar/menu.html'
 Restart=on-failure
 
 [Install]

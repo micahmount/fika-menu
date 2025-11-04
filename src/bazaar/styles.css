@@ -1,0 +1,216 @@
+/* Holiday Bazaar Menu Styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Snowflakes */
+body::before,
+body::after {
+    content: '❄';
+    position: absolute;
+    color: rgba(200, 200, 220, 0.3);
+    font-size: 8em;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body::before {
+    top: 5%;
+    left: 5%;
+    transform: rotate(15deg);
+}
+
+body::after {
+    bottom: 10%;
+    right: 8%;
+    font-size: 6em;
+    transform: rotate(-20deg);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2em;
+    position: relative;
+    z-index: 1;
+}
+
+/* Additional Snowflakes */
+.container::before,
+.container::after {
+    content: '❅';
+    position: absolute;
+    color: rgba(200, 200, 220, 0.25);
+    font-size: 5em;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container::before {
+    top: 15%;
+    right: 10%;
+    transform: rotate(45deg);
+}
+
+.container::after {
+    bottom: 20%;
+    left: 8%;
+    font-size: 7em;
+    transform: rotate(-30deg);
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1em;
+    position: relative;
+}
+
+/* More Snowflakes around header */
+.header::before,
+.header::after {
+    content: '❆';
+    position: absolute;
+    color: rgba(200, 200, 220, 0.3);
+    font-size: 4em;
+    pointer-events: none;
+}
+
+.header::before {
+    top: -20%;
+    left: 15%;
+    transform: rotate(-15deg);
+}
+
+.header::after {
+    top: -10%;
+    right: 12%;
+    font-size: 3.5em;
+    transform: rotate(25deg);
+}
+
+.brand {
+    font-size: 5em;
+    color: #d32f2f;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.title {
+    font-size: 5em;
+    color: #d32f2f;
+    margin: 0;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+    font-size: 2em;
+    position: relative;
+}
+
+/* Snowflakes in menu area */
+.menu-grid::before,
+.menu-grid::after {
+    content: '❄';
+    position: absolute;
+    color: rgba(200, 200, 220, 0.2);
+    font-size: 6em;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.menu-grid::before {
+    top: 30%;
+    left: -5%;
+    transform: rotate(30deg);
+}
+
+.menu-grid::after {
+    top: 60%;
+    right: -3%;
+    font-size: 5em;
+    transform: rotate(-40deg);
+}
+
+.column-left,
+.column-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 1em;
+}
+
+.section-title {
+    color: #d32f2f;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    margin: 0 0 0.5em 0;
+    border-bottom: none;
+}
+
+/* Menu Items */
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #6b8e7f;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.menu-items li {
+    margin: 0.3em 0;
+}
+
+/* Prices Section */
+.prices {
+    color: #6b8e7f;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.prices p {
+    margin: 0.3em 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .menu-grid {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+}
