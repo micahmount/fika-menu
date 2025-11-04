@@ -147,15 +147,20 @@ body {
     position: relative;
 }
 
+/* Updated Item Container Styling */
 .item-container {
     display: flex;
     flex-direction: column;
     gap: 45px;
+    width: 100%;
+    padding: 20px 15px;
+    box-sizing: border-box;
 }
 
-/* Section Styling */
+/* Section Styling - Updated */
 .section {
-    margin-bottom: 0;
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .section-title {
@@ -166,9 +171,10 @@ body {
     margin: 0 0 12px 0;
     text-transform: uppercase;
     font-family: 'Arial', 'Helvetica', sans-serif;
+    padding-bottom: 5px;
 }
 
-/* Menu Items List */
+/* Menu Items List - Updated */
 .menu-items {
     list-style-type: none;
     padding: 0;
@@ -177,50 +183,33 @@ body {
     font-size: 1.15em;
     line-height: 1.6;
     font-family: 'Arial', 'Helvetica', sans-serif;
+    width: 100%;
 }
 
 .menu-items li {
-    margin: 5px 0;
+    margin: 8px 0;
+    padding-left: 10px;
 }
 
-/* Prices Section */
+/* Prices Section - Updated */
 .prices {
     color: #6b8e6b;
     font-size: 1.15em;
     line-height: 1.6;
     font-family: 'Arial', 'Helvetica', sans-serif;
+    width: 100%;
+    padding-left: 10px;
 }
 
 .price-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
 }
 
 .price-inline {
     margin-left: 40px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "item-1"
-            "item-2";
-    }
-
-    .header {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .divider {
-        display: none;
-    }
-
-    .brand, .title {
-        font-size: 3.5em;
-    }
-}
+/* TV display - fixed size */
