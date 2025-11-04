@@ -10,18 +10,14 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 100px;
-    position: relative;
+    margin-top: 3%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
         "header header"
-        "column-left column-right";
-    gap: 60px 150px;
-    min-height: 100vh;
+        "item-1 item-2";
+    position: relative;
 }
 
 /* SVG Snowflake Positioning */
@@ -136,25 +132,25 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* Menu Columns */
-.column-left {
-    grid-area: column-left;
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
+/* Menu Items */
+.item-1 {
+    grid-area: item-1;
+    margin: 3%;
     z-index: 1;
     position: relative;
-    font-size: 1.1em;
 }
 
-.column-right {
-    grid-area: column-right;
+.item-2 {
+    grid-area: item-2;
+    margin: 3%;
+    z-index: 1;
+    position: relative;
+}
+
+.item-container {
     display: flex;
     flex-direction: column;
     gap: 45px;
-    z-index: 1;
-    position: relative;
-    font-size: 1.1em;
 }
 
 /* Section Styling */
@@ -172,7 +168,7 @@ body {
     font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
-/* Menu Items */
+/* Menu Items List */
 .menu-items {
     list-style-type: none;
     padding: 0;
@@ -206,21 +202,13 @@ body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
-    .container {
-        padding: 60px 80px;
-        gap: 60px 100px;
-    }
-}
-
 @media (max-width: 900px) {
     .container {
         grid-template-columns: 1fr;
         grid-template-areas:
             "header"
-            "column-left"
-            "column-right";
-        gap: 40px;
+            "item-1"
+            "item-2";
     }
 
     .header {
