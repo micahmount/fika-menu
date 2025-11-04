@@ -6,8 +6,22 @@ body {
     font-family: 'Arial', 'Helvetica', sans-serif;
     background: #ffffff;
     min-height: 100vh;
-    position: relative;
     overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 100px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header"
+        "column-left column-right";
+    gap: 60px 150px;
+    min-height: 100vh;
 }
 
 /* SVG Snowflake Positioning */
@@ -15,10 +29,10 @@ body {
     position: absolute;
     pointer-events: none;
     opacity: 0.25;
-    z-index: 0;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 0;
 }
 
 /* Snowflake Designs */
@@ -30,22 +44,25 @@ body {
     background-image: url('../../assets/snowflake-design-b.svg');
 }
 
+/* Top left corner - large snowflake */
 .snowflake-1 {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     top: -80px;
     left: -120px;
     transform: rotate(15deg);
 }
 
+/* Top right corner - large snowflake */
 .snowflake-2 {
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
     top: -100px;
     right: -150px;
     transform: rotate(-20deg);
 }
 
+/* Left middle - behind LATTES section */
 .snowflake-3 {
     width: 380px;
     height: 380px;
@@ -54,46 +71,43 @@ body {
     transform: rotate(25deg);
 }
 
+/* Center - between columns near MOCHAS */
 .snowflake-4 {
-    width: 280px;
-    height: 280px;
-    top: 30%;
-    right: 80px;
-    transform: rotate(-30deg);
-}
-
-.snowflake-5 {
     width: 320px;
     height: 320px;
-    bottom: -50px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+/* Bottom left - near DRIP COFFEE */
+.snowflake-5 {
+    width: 350px;
+    height: 350px;
+    bottom: 80px;
     left: 50px;
     transform: rotate(40deg);
 }
 
+/* Right side - near TEA/DAIRY OPTIONS */
 .snowflake-6 {
-    width: 400px;
-    height: 400px;
-    bottom: -120px;
-    right: -100px;
+    width: 300px;
+    height: 300px;
+    top: 45%;
+    right: 80px;
     transform: rotate(-15deg);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 100px;
-    position: relative;
-    z-index: 1;
 }
 
 /* Header Section */
 .header {
+    grid-area: header;
     text-align: center;
-    margin-bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: baseline;
     gap: 0.3em;
+    z-index: 1;
+    position: relative;
 }
 
 .brand {
@@ -122,19 +136,25 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* Menu Grid */
-.menu-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 150px;
-    font-size: 1.1em;
-}
-
-.column-left,
-.column-right {
+/* Menu Columns */
+.column-left {
+    grid-area: column-left;
     display: flex;
     flex-direction: column;
     gap: 45px;
+    z-index: 1;
+    position: relative;
+    font-size: 1.1em;
+}
+
+.column-right {
+    grid-area: column-right;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    z-index: 1;
+    position: relative;
+    font-size: 1.1em;
 }
 
 /* Section Styling */
@@ -189,14 +209,20 @@ body {
 @media (max-width: 1200px) {
     .container {
         padding: 60px 80px;
-    }
-
-    .menu-grid {
-        gap: 100px;
+        gap: 60px 100px;
     }
 }
 
 @media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "column-left"
+            "column-right";
+        gap: 40px;
+    }
+
     .header {
         flex-direction: column;
         gap: 0;
@@ -204,11 +230,6 @@ body {
 
     .divider {
         display: none;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
     }
 
     .brand, .title {
